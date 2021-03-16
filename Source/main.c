@@ -44,7 +44,8 @@ int main(int argc, char** argv)
             break;
         }
 
-        default: {
+        default: 
+	{
             WHBLogPrintf("Unknown VPAD error! %08X", error);
             vpad_fatal = true;
             break;
