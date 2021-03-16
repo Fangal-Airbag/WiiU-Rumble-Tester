@@ -17,7 +17,7 @@ include $(DEVKITPRO)/wut/share/wut_rules
 # DATA is a list of directories containing data files
 # INCLUDES is a list of directories containing header files
 #-------------------------------------------------------------------------------
-TARGET		:=	$(notdir $(CURDIR))
+TARGET		:=	Rumble_Tester
 BUILD		:=	build
 SOURCES		:=	Source
 DATA		:=	data
@@ -104,20 +104,6 @@ clean:
 	@echo clean ...
 	@rm -fr $(BUILD) $(TARGET).rpx $(TARGET).elf
 
-#-------------------------------------------------------------------------------
-install_channel: $(BUILD) NUSPacker.jar encryptKeyWith
-	@cp $(OUTPUT).rpx channel/code/
-	java -jar NUSPacker.jar -in "channel" -out "install_channel"
-
-NUSPacker.jar:
-	wget https://bitbucket.org/timogus/nuspacker/downloads/NUSPacker.jar
-
-encryptKeyWith:
-	@echo "Missing common key file \"encryptKeyWith\"! Insert the common key as string into \"encryptKeyWith\" file in the Hello World Makefile path!"
-	@exit 1
-	
-clean_channel:
-	@rm -fr install_channel NUSPacker.jar fst.bin output tmp
 #---------------------------------------------------------------------------------
 else
 
