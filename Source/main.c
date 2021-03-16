@@ -15,6 +15,8 @@ int main(int argc, char** argv)
 	
     WHBLogPrint("Rumble Tester Made by Fangal :3");
     WHBLogPrint("Press and hold A to rumble");
+    WHBLogPrint("Press HOME to exit");	
+    
     WHBLogConsoleDraw();
 
     VPADStatus status;
