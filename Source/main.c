@@ -71,7 +71,6 @@ int main(int argc, char** argv)
 
     WHBLogPrint("Quitting");
     WHBLogConsoleFree();
-    WHBLogUdpDeinit();
     WHBProcShutdown();
 
     return 0;
