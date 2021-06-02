@@ -70,7 +70,7 @@ int main(int argc, char** argv)
             WHBLogPrint("Released A, stopping rumble");
             VPADStopMotor(VPAD_CHAN_0);
         }
-	}
+}
 
     WHBLogPrint("Quitting");
     WHBLogConsoleFree();
